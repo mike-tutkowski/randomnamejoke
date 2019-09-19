@@ -1,5 +1,5 @@
-package manager;
+package service;
 
-public interface Manager {
+public interface Service {
     String getRandomNameJoke() throws Exception;
 }

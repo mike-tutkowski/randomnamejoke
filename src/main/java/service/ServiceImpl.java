@@ -1,14 +1,12 @@
-package manager;
+package service;
 
 import data.Joke;
 import data.Person;
 
-import org.springframework.stereotype.Service;
-
 import util.Util;
 
-@Service
-public class ManagerImpl implements Manager {
+@org.springframework.stereotype.Service
+public class ServiceImpl implements Service {
     private static final String RANDOM_PERSON_URL = "http://uinames.com/api/";
     private static final String RANDOM_JOKE_URL = "http://api.icndb.com/jokes/random";
 

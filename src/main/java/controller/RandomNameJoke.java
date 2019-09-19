@@ -1,6 +1,6 @@
 package controller;
 
-import manager.Manager;
+import service.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class RandomNameJoke {
     @Autowired
-    private Manager manager;
+    private Service service;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     ResponseEntity<String> getRandomNameJoke() {
         String randomJoke;
 
         try {
-            randomJoke = manager.getRandomNameJoke();
+            randomJoke = service.getRandomNameJoke();
 
             String msg = randomJoke + "\n";
 
@@ -34,7 +34,7 @@ class RandomNameJoke {
         }
     }
 
-    public void setManager(Manager manager) {
-        this.manager = manager;
+    public void setService(Service service) {
+        this.service = service;
     }
 }

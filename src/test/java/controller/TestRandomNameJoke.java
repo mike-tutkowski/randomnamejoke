@@ -1,6 +1,6 @@
 package controller;
 
-import manager.Manager;
+import service.Service;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +20,7 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 class TestRandomNameJoke {
-    @Mock private Manager mockManager;
+    @Mock private Service mockService;
     @InjectMocks private RandomNameJoke randomNameJoke;
 
     @BeforeEach
@@ -32,11 +32,11 @@ class TestRandomNameJoke {
     void testRandomNameJokeSuccess() throws Exception {
         final String JOKE = "Mike Tutkowski says there are 10 types of people in the world: those who understand binary and those who don't.";
 
-        when(mockManager.getRandomNameJoke()).thenReturn(JOKE);
+        when(mockService.getRandomNameJoke()).thenReturn(JOKE);
 
         ResponseEntity<String> responseEntity = randomNameJoke.getRandomNameJoke();
 
-        verify(mockManager, times(1)).getRandomNameJoke();
+        verify(mockService, times(1)).getRandomNameJoke();
 
         Assert.assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
         Assert.assertEquals(responseEntity.getBody(), JOKE + "\n");
@@ -47,11 +47,11 @@ class TestRandomNameJoke {
         final String ERROR_MSG = "Unable to access the REST service.";
         Exception exception = new Exception(ERROR_MSG);
 
-        doThrow(exception).when(mockManager).getRandomNameJoke();
+        doThrow(exception).when(mockService).getRandomNameJoke();
 
         ResponseEntity<String> responseEntity = randomNameJoke.getRandomNameJoke();
 
-        verify(mockManager, times(1)).getRandomNameJoke();
+        verify(mockService, times(1)).getRandomNameJoke();
 
         Assert.assertEquals(responseEntity.getStatusCode(), HttpStatus.INTERNAL_SERVER_ERROR);
         Assert.assertEquals(responseEntity.getBody(), ERROR_MSG + "\n");
