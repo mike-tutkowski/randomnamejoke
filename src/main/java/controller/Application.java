@@ -1,9 +1,9 @@
-package service;
+package controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"service", "manager"})
+@SpringBootApplication(scanBasePackages = {"controller", "manager"})
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
