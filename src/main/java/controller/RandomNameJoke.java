@@ -2,6 +2,8 @@ package controller;
 
 import service.Service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 class RandomNameJoke {
-    @Autowired
-    private Service service;
+    private Logger logger = LoggerFactory.getLogger(RandomNameJoke.class);
+    @Autowired private Service service;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     ResponseEntity<String> getRandomNameJoke() {
@@ -22,19 +24,19 @@ class RandomNameJoke {
             randomJoke = service.getRandomNameJoke();
 
             String msg = randomJoke + "\n";
+            String formattedMsg = String.format("Error response to client: '%s'", randomJoke);
 
-            System.out.print(msg);
+            logger.debug(formattedMsg);
+
             return new ResponseEntity<>(msg, HttpStatus.OK);
         }
         catch (Exception ex) {
             String errMsg = ex.getMessage() + "\n";
-            ex.printStackTrace();
+            String formattedMsg = String.format("Error response to client: '%s'", ex.getMessage());
+
+            logger.error(formattedMsg);
 
             return new ResponseEntity<>(errMsg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }
-
-    public void setService(Service service) {
-        this.service = service;
     }
 }
