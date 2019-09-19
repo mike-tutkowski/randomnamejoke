@@ -1,3 +1,6 @@
+
+*** Running the application ***
+
 To run the REST service from a command prompt:
     * Navigate to the folder that contains this README file.
     * Execute the following command: ./mvnw spring-boot:run
@@ -14,12 +17,25 @@ Note: To build and run this code, I have included mvnw (and a private folder
   OSes (including Mac OS X). I have not included here the equivalent Maven
   wrapper for Windows.
 
+*** Running the tests for the application ***
+
 To run the unit tests for the REST service from a command prompt:
     * Navigate to the folder that contains this README file.
     * Execute the following command: ./mvnw clean test
+
+*** Controlling the logging behavior ***
 
 A log file, called randomnamejoke.log, is created (if not already present) in the logs folder
 when running the REST service. You can control the characteristics of logging by editing the
 log4j.properties file located in src/main/resources (requires a restart of the REST service
 for the changes to take effect).
+
+
+
+
+*** Future ideas ***
+
+* Make use of Aspect-oriented programming (AoP) to enable simplified logging for when each
+  function is entered and before it is exited. This information would be written to the log
+  when logging is set to DEBUG or higher.
 
