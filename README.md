@@ -9,9 +9,14 @@ Alternatively, you can run the REST service from a command prompt as follows:
     * java -jar target/random-name-joke-service-1.0.0.jar
     * Execute CTRL-C to terminate the REST service.
 
+Note: To build and run this code, I have included mvnw (and a private folder
+  called .mvn). This particular wrapper for Maven functions on Linux-based
+  OSes (including Mac OS X). I have not included here the equivalent Maven
+  wrapper for Windows.
+
 To run the unit tests for the REST service from a command prompt:
     * Navigate to the folder that contains this README file.
-    * ./mvnw clean test
+    * Execute the following command: ./mvnw clean test
 
 A log file, called randomnamejoke.log, is created (if not already present) in the logs folder
 when running the REST service. You can control the characteristics of logging by editing the
