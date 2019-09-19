@@ -27,7 +27,7 @@ public class Util {
 
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
-        logger.debug("Response body = " + response.getBody());
+        LOGGER.debug("Response body = " + response.getBody());
 
         ObjectMapper mapper = new ObjectMapper();
 

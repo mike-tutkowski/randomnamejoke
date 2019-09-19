@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 class RandomNameJoke {
-    private static Logger logger = Logger.getLogger(RandomNameJoke.class);
+    private static final Logger LOGGER = Logger.getLogger(RandomNameJoke.class);
+
     @Autowired private Service service;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -25,7 +26,7 @@ class RandomNameJoke {
             String msg = randomJoke + "\n";
             String formattedMsg = String.format("Error response to client: '%s'", randomJoke);
 
-            logger.debug(formattedMsg);
+            LOGGER.debug(formattedMsg);
 
             return new ResponseEntity<>(msg, HttpStatus.OK);
         }
@@ -33,7 +34,7 @@ class RandomNameJoke {
             String errMsg = ex.getMessage() + "\n";
             String formattedMsg = String.format("Error response to client: '%s'", ex.getMessage());
 
-            logger.error(formattedMsg);
+            LOGGER.error(formattedMsg);
 
             return new ResponseEntity<>(errMsg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
