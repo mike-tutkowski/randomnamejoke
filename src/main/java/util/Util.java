@@ -31,6 +31,13 @@ public class Util {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        return mapper.readValue(response.getBody(), cls);
+        try {
+            return mapper.readValue(response.getBody(), cls);
+        }
+        catch (Exception ex) {
+            LOGGER.error(ex.getMessage(), ex);
+
+            throw ex;
+        }
     }
 }

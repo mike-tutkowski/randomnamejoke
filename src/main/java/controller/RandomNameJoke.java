@@ -34,7 +34,7 @@ class RandomNameJoke {
             String errMsg = ex.getMessage() + "\n";
             String formattedMsg = String.format("Error response to client: '%s'", ex.getMessage());
 
-            LOGGER.error(formattedMsg);
+            LOGGER.error(formattedMsg, ex);
 
             return new ResponseEntity<>(errMsg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
