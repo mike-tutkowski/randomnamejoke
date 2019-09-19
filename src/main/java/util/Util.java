@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 
 public class Util {
-    private static Logger logger = Logger.getLogger(Util.class);
+    private static Logger LOGGER = Logger.getLogger(Util.class);
     private static final String USER_AGENT_VALUE = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36";
 
     public static <T> T executeRestGet(String url, Class<T> cls) throws Exception {
