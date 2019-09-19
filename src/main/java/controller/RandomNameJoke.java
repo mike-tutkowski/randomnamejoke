@@ -2,8 +2,7 @@ package controller;
 
 import service.Service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 class RandomNameJoke {
-    private Logger logger = LoggerFactory.getLogger(RandomNameJoke.class);
+    private static Logger logger = Logger.getLogger(RandomNameJoke.class);
     @Autowired private Service service;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)

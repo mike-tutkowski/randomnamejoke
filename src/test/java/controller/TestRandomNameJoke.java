@@ -30,7 +30,7 @@ class TestRandomNameJoke {
 
     @Test
     void testRandomNameJokeSuccess() throws Exception {
-        final String JOKE = "Mike Tutkowski says there are 10 types of people in the world: those who understand binary and those who don't.";
+        final String JOKE = "Test code: Mike Tutkowski says there are 10 types of people in the world: those who understand binary and those who don't.";
 
         when(mockService.getRandomNameJoke()).thenReturn(JOKE);
 
@@ -44,7 +44,7 @@ class TestRandomNameJoke {
 
     @Test
     void testRandomNameJokeFailure() throws Exception {
-        final String ERROR_MSG = "Unable to access the REST service.";
+        final String ERROR_MSG = "Test code: Unable to access the REST service.";
         Exception exception = new Exception(ERROR_MSG);
 
         doThrow(exception).when(mockService).getRandomNameJoke();
