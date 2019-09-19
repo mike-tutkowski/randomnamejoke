@@ -3,6 +3,8 @@ package service;
 import data.Joke;
 import data.Person;
 
+import manager.PersonManager;
+
 import org.apache.log4j.Logger;
 
 import util.Util;
@@ -10,17 +12,13 @@ import util.Util;
 @org.springframework.stereotype.Service
 public class ServiceImpl implements Service {
     private static final Logger LOGGER = Logger.getLogger(ServiceImpl.class);
-    private static final String RANDOM_PERSON_URL = "http://uinames.com/api/";
+
     private static final String RANDOM_JOKE_URL = "http://api.icndb.com/jokes/random";
 
     public String getRandomNameJoke() throws Exception {
-        Person randomPerson = getRandomPerson();
+        Person randomPerson = PersonManager.getRandomPerson();
 
         return getRandomJoke(randomPerson);
-    }
-
-    private static Person getRandomPerson() throws Exception {
-        return Util.executeRestGet(RANDOM_PERSON_URL, Person.class);
     }
 
     /**
@@ -34,8 +32,9 @@ public class ServiceImpl implements Service {
      */
     private static String getRandomJoke(Person person) throws Exception {
         String parameters = String.format("?firstName=%s&lastName=%s&limitTo=nerdy", person.getName(), person.getSurname());
+        String urlWithParams = RANDOM_JOKE_URL + parameters;
 
-        Joke joke = Util.executeRestGet(RANDOM_JOKE_URL + parameters, Joke.class);
+        Joke joke = Util.executeRestGet(urlWithParams, Joke.class);
 
         if (joke.isSuccess()) {
             LOGGER.debug("Joke: " + joke.getJoke());
