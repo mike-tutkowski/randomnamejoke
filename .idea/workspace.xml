@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd06345d-855d-4732-866a-d1bf7c17f61a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/RandomNameJoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RandomNameJoke.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/TestRandomNameJoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/TestRandomNameJoke.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestRandomNameJoke.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/controller/TestRandomNameJoke.java">
+      <file leaf-file-name="ManagerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state relative-caret-position="375">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,6 +40,7 @@
     <findStrings>
       <find>json</find>
       <find>junit</find>
+      <find>Note:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -58,10 +57,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/service/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/manager/Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/RandomNameJoke.java" />
         <option value="$PROJECT_DIR$/src/test/java/service/TestRandomNameJoke.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -527,16 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.10.0/mockito-core-2.10.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -597,16 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/manager/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -636,8 +615,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/controller/TestRandomNameJoke.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/manager/ManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -23,8 +23,10 @@ public class ManagerImpl implements Manager {
     }
 
     /**
-     * Note: Current the REST server we talk to here can return text like such as &quot; to indicate a quotation. At
-     *   present, this is just passed as is back from this method.
+     * Note: Currently the REST service we talk to here can return text such as &quot; to indicate a quotation mark.
+     *   It can also make mistakes with apostrophe s (as on the next line):
+     *   "Lucy Kirk'ss OSI network model has only one layer - Physical."
+     *   At present, this is just passed as is back from this method.
      * @param person - instance of the Person class, used in building a custom joke.
      * @return a random joke as a String. The joke includes the person's first and last names.
      * @throws Exception - if we are not successful in retrieving a customized joke.
