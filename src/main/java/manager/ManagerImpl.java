@@ -3,13 +3,16 @@ package manager;
 import data.Joke;
 import data.Person;
 
+import org.springframework.stereotype.Service;
+
 import util.Util;
 
+@Service
 public class ManagerImpl implements Manager {
     private static final String RANDOM_PERSON_URL = "http://uinames.com/api/";
     private static final String RANDOM_JOKE_URL = "http://api.icndb.com/jokes/random";
 
-    public String getRandomJoke() throws Exception {
+    public String getRandomNameJoke() throws Exception {
         Person randomPerson = getRandomPerson();
 
         return getRandomJoke(randomPerson);
