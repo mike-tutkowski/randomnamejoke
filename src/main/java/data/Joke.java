@@ -26,4 +26,20 @@ public class Joke {
             return joke;
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Joke) {
+            Joke joke = (Joke)obj;
+
+            return this.success.equals(joke.success) && this.value.equals(joke.value);
+        }
+
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Joke: %s", value.getJoke());
+    }
 }

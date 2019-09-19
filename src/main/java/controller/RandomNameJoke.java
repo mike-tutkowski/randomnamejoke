@@ -24,7 +24,7 @@ class RandomNameJoke {
             randomJoke = service.getRandomNameJoke();
 
             String msg = randomJoke + "\n";
-            String formattedMsg = String.format("Error response to client: '%s'", randomJoke);
+            String formattedMsg = String.format("Successful response to client: '%s'", randomJoke);
 
             LOGGER.debug(formattedMsg);
 

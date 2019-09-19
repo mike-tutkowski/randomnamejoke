@@ -17,4 +17,20 @@ public class Person {
     public String getSurname() {
         return surname;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Person) {
+            Person person = (Person)obj;
+
+            return this.name.equals(person.name) && this.surname.equals(person.surname);
+        }
+
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Person: First name = %s; Last name = %s", name, surname);
+    }
 }
