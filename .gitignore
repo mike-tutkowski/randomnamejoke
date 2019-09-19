@@ -1,5 +1,2 @@
 target/*
-logs/randomnamejoke.log
-logs/randomnamejoke.log.1
-logs/randomnamejoke.log.2
-src/main/resources/log4j.properties
+logs/*
