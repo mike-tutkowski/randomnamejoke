@@ -50,3 +50,17 @@ controller.Application class, but this class primarily consists of a bit of boil
   function is entered and before it is exited. This information would be written to the log
   when logging is set to DEBUG or higher.
 
+* Make use of MockServer (http://www.mock-server.com/) to intercept HTTP calls for unit testing.
+  For example, this system makes calls to two REST services to retrieve data. With MockServer, we
+  could tell the testing infrastructure to intercept those calls and instead return data that we
+  specify in the tests. This would be a supplement for the existing Mockito tests, not a
+  replacement.
+
+* Increase the code coverage of the unit tests. I did not run any code-coverage tools against this
+  software, but there are plenty of areas where code coverage could be increased.
+
+* Develop integration/system tests for this REST service. At the time, I have some degree of unit (L1)
+  testing, but no integration/system (L2/L3) testing. All of my integration/system testing was performed
+  manually (example: making sure the system returned data in a timely fashion while the API was being
+  invoked from multiple instances of curl at the same time).
+
