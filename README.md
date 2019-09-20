@@ -23,6 +23,14 @@ To run the unit tests for the REST service from a command prompt:
     * Navigate to the folder that contains this README file.
     * Execute the following command: ./mvnw clean test
 
+*** Calling into the REST service from a client ***
+
+Example call:
+$ curl 'http://localhost:5000'
+
+Example output:
+Θεόδοτος Μακρής can instantiate an abstract class.
+
 *** Controlling the logging behavior ***
 
 A log file, called randomnamejoke.log, is created (if not already present) in the logs folder
