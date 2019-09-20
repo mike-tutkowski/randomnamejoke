@@ -30,8 +30,11 @@ when running the REST service. You can control the characteristics of logging by
 log4j.properties file located in src/main/resources (requires a restart of the REST service
 for the changes to take effect).
 
+*** Organization of the code ***
 
-
+The entrypoint for the system is effectively the controller.RandomNameJoke.getRandomNameJoke
+method (technically, Spring starts the system up through the standard main method in the
+controller.Application class, but this class primarily consists of a bit of boilerplate code).
 
 *** Future ideas ***
 

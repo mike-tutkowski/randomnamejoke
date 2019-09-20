@@ -9,6 +9,10 @@ import org.apache.log4j.Logger;
 
 import util.Util;
 
+/**
+ * The ServiceImpl class, which implements the Service interface, represents
+ * the business logic of the system.
+ */
 @org.springframework.stereotype.Service
 public class ServiceImpl implements Service {
     private static final Logger LOGGER = Logger.getLogger(ServiceImpl.class);
