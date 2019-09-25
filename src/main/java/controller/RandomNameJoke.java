@@ -18,10 +18,8 @@ class RandomNameJoke {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     ResponseEntity<String> getRandomNameJoke() {
-        String randomJoke;
-
         try {
-            randomJoke = service.getRandomNameJoke();
+            String randomJoke = service.getRandomNameJoke();
 
             String msg = randomJoke + "\n";
             String formattedMsg = String.format("Successful response to client: '%s'", randomJoke);
